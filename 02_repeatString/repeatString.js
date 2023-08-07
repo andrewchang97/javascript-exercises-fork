@@ -1,11 +1,17 @@
-const repeatString = function(word, times) {
-    if (times < 0) return "ERROR";
-    let string = "";
-    for (let i = 0; i < times; i++){
-    string += word;
+const repeatString = function(string,number) {
+    let words = "";
+    if (number > 0) {
+    for (i = 0; i < number; i++) {
+        words += string;
     }
-    return string
+    return words;
+    } else if (number < 0) {
+        return 'ERROR';
+    } else {
+        return "";
+    }
 };
+
 
 // Do not edit below this line
 module.exports = repeatString;
